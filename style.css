@@ -1,0 +1,616 @@
+
+
+/*
+** Various global
+*/
+
+:root {
+
+/*
+** Large name banner (uses h1 tags )
+*/	
+
+	--z-vortex:3;
+	--z-nova:6;
+	--z-general:5;
+	--z-colorin:4;
+	--z-rose:4;
+	--z-logo:10;
+	
+	--link-new:#cc2222;
+	--link-visited:#950b16;
+	
+	--banner-bg-color:#280317;
+	--banner-font-color:#f7a8c5;
+	--banner-border-color:coral;
+	--banner-padding: 0%;
+	--banner-border-width: 3px;
+	
+/*
+** "Mission Statement" banner ( uses h2 tags )
+*/
+	--header-bg-color:#230523;
+	--header-font-color:#f7a8c5;
+	--header-border-color:#82042c;
+	--header-padding: 0%;
+	--header-border-width: var(--banner-border-width);
+/*
+**
+*/		
+	--sidebar-bg-color:#17020f;
+	--sidebar-font-color:violet;
+	--sidebar-border-color:coral;
+	--sidebar-padding: 0%;
+	--sidebar-border-width: var(--banner-border-width);
+
+/*
+** Used by class regpara, or the "Articles" textblock.
+*/
+
+	--para-border-color:coral;
+	--para-bg-color: rgba(140,15,109,0.7);
+	--para-font-color: #ffbcff;
+	--para-padding: 5px;
+	--para-border-width: var(--banner-border-width);
+
+/*
+** Width of the Links sidebar/main elements.  Should be modified together and accordingly.
+*/		 
+	 --sidebar-size: 25%;
+	 --main-size: /* 75%; */ calc(100% - var(--sidebar-size));  
+	
+	 --logo-width: 150px;
+	 --logo-aspect: 0.75; /* 4:3 */
+	 --logo-height: calc( var(--logo-width) * var(--logo-aspect));
+	 
+	 --logo-half-width: calc(var(--logo-width)/2);
+	 --logo-x-offset: calc(50% - var(--logo-half-width));
+	 
+	 
+} /* :root */
+	
+/**
+***
+*** CODE BEGINS
+***
+**/
+
+
+/*
+** The long first part of the code is all for the animations.  Search for "Web Content"
+** to find the part for the actual text formatting.
+*/
+
+/*
+** nova-anim: The introductory animation of a fuzzy circular explosion and collapse.
+*/
+
+#nova-anim {
+
+  animation-name: nova;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  
+  position: relative;
+ 
+  left: var(--logo-x-offset);
+
+  z-index:var(--z-nova);
+
+  
+  width: var(--logo-width);
+  height: var(--logo-height);
+  
+   border-style: solid;
+   border-color: #ffffff;
+  border-radius:50%;
+ 
+} /* #nova-anim */
+
+@keyframes nova {
+  0% {
+  opacity:0;
+  box-shadow: 0 0 20px 100px #ffffff;
+  } 
+  10% {
+  opacity:0;
+  }
+  20% {
+  opacity:1;
+  box-shadow: 0 0 5000px 500px #ffffff;
+  }
+  25% {
+  opacity:1;
+  }
+  85% {
+  opacity:0.3;
+  background:linear-gradient(315deg,#f0138c,rgba(31,255,121,1)); 
+  }
+  90% {
+  box-shadow: 0 0 150px 100px #ffffff;
+  }
+  99% {
+  box-shadow: 0 0 15px 10px #ffffff;
+  }
+  100% {
+  opacity:1;
+  }
+} /* keyframes nova-anim */
+
+
+/*
+** Vortex - This is the spinning background colors. The vortex id exists to group
+** together two subcomponents below and fade them in together.
+*/
+
+#vortex {
+
+  position:fixed;
+  top:0;
+  left:0;
+    		
+  width:100%;
+  height:100%;
+    
+  opacity 0;
+    		
+  animation-name: vortex-fade-in;
+  animation-duration: 3s;
+  animation-fill-mode: forwards; 
+    	
+  z-index:var(--z-vortex); 
+    		
+}
+    		
+@keyframes vortex-fade-in {
+95% {
+  opacity:0;
+}
+100% {
+  opacity:1;
+}
+} /* keyframes vortex-fade-in */
+   
+
+
+
+/*
+** color-rotate: First vortex component. Spin a slightly transparent purple/green
+** color gradient around in a circle clockwise.
+*/	
+
+#color-rotate {
+ /*
+  z-index:1;  
+  */
+  position:fixed;
+  top:0;
+  right:0;
+   
+  animation-name:color-rotate;
+  animation-duration:700ms;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+  
+  width:var(--main-size);
+  height:100%;
+  
+  opacity:0.75;
+
+  } /* color-rotate */
+  
+  @keyframes color-rotate {
+  0% {
+  background: linear-gradient(30.0089deg,#f0138c,rgba(0,0,0,0.5),rgba(31,255,121,0.9));
+  }
+  12.5% {
+  background: linear-gradient(75.0089deg,#f0138c,rgba(0,0,0,0.5)),rgba(31,255,121,0.9));
+  }
+  25% {
+  background: linear-gradient(120.0089deg,#f0138c,rgba(0,0,0,0.5)),rgba(31,255,121,0.9));
+  }
+  37.5% {
+  background: linear-gradient(165.0089deg,#f0138c,rgba(0,0,0,0.5)),rgba(31,255,121,0.9));
+  }
+  50% {
+  background: linear-gradient(210.0089deg,#f0138c,rgba(0,0,0,0.5)),rgba(31,255,121,0.9));
+  }
+  62.5% {
+  background: linear-gradient(255.0089deg,#f0138c,rgba(0,0,0,0.5)),rgba(31,255,121,0.9));
+  }
+  75% {
+  background: linear-gradient(300.0089deg,#f0138c,rgba(0,0,0,0.5)),rgba(31,255,121,0.9));
+  }
+  87.5% {
+  background: linear-gradient(345.0089deg,#f0138c,rgba(0,0,0,0.5)),rgba(31,255,121,0.9));
+  }
+  100% {
+  background: linear-gradient(30.0089deg,#f0138c,rgba(0,0,0,0.5)),rgba(31,255,121,0.9));
+  }
+  } /* keyframes color-rotate */
+  
+
+
+
+
+/*
+** back-rotate: The other vortex component.  Spin a different color gradient the other way,
+** counterclockwise, offset from the first one 22.5 degrees.
+*/
+#back-rotate {
+
+  position:fixed;
+  top:0;
+  right:0;
+    /*
+  z-index:1; 
+      */ 
+  width:var(--main-size);
+  height:100%;
+ 
+  animation-name:back-rotate;
+  animation-duration:900ms;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+
+} /* #back-rotate */
+   
+  @keyframes back-rotate {
+  0% {
+  background:linear-gradient(7.5089deg,orange,coral,#850415,coral,orange);
+  }
+  12.5% { 
+  background:linear-gradient(322.5089deg,orange,coral,purple,coral,orange);
+  }
+  25% {
+  background:linear-gradient(277.5089deg,orange,coral,#850415,coral,orange);
+  }
+  37.5% {
+  background:linear-gradient(232.5089deg,orange,coral,purple,coral,orange);
+  }
+  50% {
+  background:linear-gradient(187.5089deg,orange,coral,#850415,coral,orange);
+  }
+  62.5% {
+  background:linear-gradient(142.5089deg,orange,coral,purple,coral,orange);
+  }
+  75% {
+  background:linear-gradient(97.5089deg,orange,coral,#850415,coral,orange);
+  }
+  87.5% {
+  background:linear-gradient(52.5089deg,orange,coral,purple,coral,orange);
+  }
+  100% {
+  background:linear-gradient(7.5089deg,orange,coral,#850415,coral,orange);
+  }
+} /* keyframes back-rotate */
+  
+
+
+
+
+
+/*
+** #colorin - This is the part that sets the initial background to black for the nova
+** animation, and then fades in and out a green/purple color gradient as that animation plays 
+** out.
+*/
+#colorin {
+
+  position:fixed;
+  top:0;
+  left:0;
+  
+  z-index:var(--z-colorin);
+  
+  animation-name:color-in;
+  animation-duration:4s;
+  animation-fill-mode:forwards;
+
+  width:100%;
+  height:100%
+
+} /* color-in */
+
+@keyframes color-in {
+  0% {
+  opacity:1;
+  background-color:black;
+  }
+  40% {
+  background-color:black;
+  opacity:1;
+  }
+  65% {
+  opacity:0.8;
+  background: linear-gradient(315deg,rgba(31,255,121,0.9),rgba(0,0,0,0.8),#f0138c);
+  }
+  99% {
+  opacity:0;
+  background: linear-gradient(315deg,#f0138c,rgba(0,0,0,0.8),rgba(31,255,121,0.9));
+  }
+} /* keyframes color-in */
+
+
+
+
+/*
+** content-delay: This set of keyframes times the introduction of several text elements.
+** 
+*/
+
+#delay2secs { /* 2 second delay, fading in from 70% on.  Several html elements use this. */
+  animation-name:delay2;
+  animation-duration:2s;
+} /* delay2secs */
+
+
+.rose { /* rose, uniquely, uses delay2 at a different timing, so is included here. */
+
+  position: fixed;
+  top:10%;
+  left:42%;
+  width: 40%;
+  
+  animation-name:content-delay;
+  animation-duration:500ms;
+
+  z-index:var(--z-rose);
+
+  opacity: 0.3;
+
+} /* rose */
+
+@keyframes delay2 {
+  0% {
+  opacity:0;
+  }
+  70% {
+  opacity:0;
+  }
+  100% {
+  opacity:1;
+  }
+} /* keyframes delay2 */
+
+
+
+/*
+** logo: The only component that fades in at other than the from-70% rate of the
+** other things.  It's the picture of me that fades in over the nova spot.
+*/
+
+#logo {
+
+ 
+  position: relative;
+  z-index: var(--z-logo); 
+
+
+  width:var(--logo-width);
+  height:var(--logo-height);
+  animation-name: img-delay;
+  animation-duration: 4s;
+
+  border-style:solid;
+  border-color:var(--banner-border-color);
+  border-radius:50%;
+
+  box-shadow: 0 0 15px 10px #99ffff;
+} /* logo */
+
+@keyframes img-delay {
+  0% {
+  opacity:0;
+  }
+  45% {
+  opacity:0;
+  }
+  100% {
+  opacity:1;
+  }
+} /* keyframes img-delay */
+
+
+
+
+
+
+/*
+** Web Content / web content / WEB CONTENT
+*/
+
+
+/*
+** sidebar: The list of links at the side. 
+*/	
+.sidebar {
+
+  position: fixed;
+  height: 100%;
+  width: var(--sidebar-size);
+  top: 0;
+  left: 0;
+  
+  z-index: var(--z-general);
+
+  background: linear-gradient(45deg,#17020f,#1a0e05,#021c0d);
+
+  overflow-x: hidden;
+
+  
+} /* .sidebar */
+
+.smallpara { /* placed here because only sidebar uses it. */
+             /* It doesn't need an intro delay because sidebar has one. */
+  font-size: 22px;
+  border-style: solid;
+  border-color: var(--para-border-color);
+  padding:var(--para-padding);
+} /* smallpara */
+
+
+/* Link colors coded here because again only sidebar uses it. */
+
+a:visited {
+color: var(--link-visited);
+}
+
+a:link {
+color: var(--link-new);
+}
+
+
+/*
+** Main part begins here.  It's sort of in the name.
+*/
+.main {
+
+  position:relative;
+  top:0;
+  
+  margin-left: var(--sidebar-size); 
+  padding: 0px 10px 0px 10px;
+ /* font-size: 28px; */
+
+} /* main */
+
+
+/*
+** Container to stack the header elements vertically
+*/
+
+
+.header-box {
+  position: relative;
+  z-index:var(--z-general);
+  display: flex;
+  flex-flow: column; 
+  background:rgba(0,0,0,0);
+} /* header box */
+
+
+#banner-main {  /* These properties are common to banner1 and banner2 */
+
+  position: relative; 
+  font-family:Parisienne,cursive,arial,helvetica;
+  text-align:center;
+  z-index:var(--z-general);
+
+} /* #banner-main */
+
+.banner1 { /* My huge signature line at the top */
+
+  position: relative; 
+  line-height: 180%;
+
+  font-size:96px;
+
+  border-style: solid;
+  border-color: var(--banner-border-color);
+  background:var(--banner-bg-color);
+  color:var(--banner-font-color);
+   z-index:var(--z-general);
+ 
+} /* .banner1 */
+
+.banner2 { /* The "mission statement" */
+
+  position: relative; 
+ /* top:160px; */
+  
+  font-size:36px;
+
+  border-style: solid;
+  border-color: var(--header-border-color);
+  background: var(--header-bg-color);
+  color: var(--header-font-color);
+  z-index:var(--z-general);
+
+} /* .banner2 */
+  
+
+/*
+** The HTML/CSS h? tags.  
+** 
+*/
+
+h1 { 
+ 
+  font-family:Parisienne,cursive,arial,helvetica;
+  border-style: solid;
+  border-color: var(--banner-border-color);
+  background-color:var(--banner-bg-color);
+  color:var(--banner-font-color);
+}
+
+
+h2 {
+
+  font-family:Parisienne,cursive,arial,helvetica;
+  border-style: solid;
+  border-color: var(--header-border-color);
+  background: var(--header-bg-color);
+  color: var(--header-font-color);
+
+}
+
+
+h3 { /* h3 is reserved for the sidebar */
+  font-size: 18px;
+  border-style: solid;
+  border-color: coral;
+  color:violet;
+  background:linear-gradient(270deg,rgba(3,255,255,0.4),#000000);
+  text-align:left;
+}
+
+p {
+text-align:justify;
+padding: var(--para-padding);
+}
+
+.thumbnail { /* Must be like a billboard or something */
+             /* No, it's thumbnails.  They should be in a regpara container... */
+  float: left;
+ 	      /* ^^ because of that.  If they're just out there naked they won't get */
+ 	      /* the container's z stacking priority. */
+ 	      
+  font-size:16px;
+  border-style: solid;
+  border-color: var(--para-border-color);
+  color: var(--para-font-color);
+
+  background: #6b0603;
+  
+  padding: 2px;
+  text-align:center;
+  
+} /* thumbnail */
+
+.regpara { /* This is meant to be a container block for the bulk of the writing, whatever */
+	   /* that may wind up consisting of. */
+
+  position: relative; 
+
+  z-index:5;
+
+  font-size: 26px;
+  border-style: solid;
+  border-color: var(--para-border-color);
+  color: var(--para-font-color);
+  background: linear-gradient(12deg,rgba(32,151,23,0.9),rgba(5,9,3,1),rgba(130,10,130,0.7),rgba(5,9,3,0.8),rgba(192,75,60,0.8));
+
+  padding:var(--para-padding);
+
+} /* regpara */
+
+
+
+
+
+
+
+
+
+

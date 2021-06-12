@@ -1,0 +1,270 @@
+/*
+** "Projects" css sheet
+**
+** June 9 2021
+*/
+
+
+/*
+** Various global
+*/
+
+:root {
+
+/*
+** Large name banner (uses h1 tags )
+*/	
+
+	--z-vortex:3;
+	--z-nova:6;
+	--z-general:5;
+	--z-colorin:4;
+	--z-rose:4;
+	--z-logo:10;
+	
+	--link-new:#cc2222;
+	--link-visited:#950b16;
+	
+	--banner-bg-color:#280317;
+	--banner-font-color:#f7a8c5;
+	--banner-border-color:coral;
+	--banner-padding: 0%;
+	--banner-border-width: 3px;
+	
+/*
+** "Mission Statement" banner ( uses h2 tags )
+*/
+	--header-bg-color:#230523;
+	--header-font-color:#f7a8c5;
+	--header-border-color:#82042c;
+	--header-padding: 0%;
+	--header-border-width: var(--banner-border-width);
+/*
+**
+*/		
+	--sidebar-bg-color:#17020f;
+	--sidebar-font-color:violet;
+	--sidebar-border-color:coral;
+	--sidebar-padding: 0%;
+	--sidebar-border-width: var(--banner-border-width);
+
+/*
+** Used by class regpara, or the "Articles" textblock.
+*/
+
+	--para-border-color:coral;
+	--para-bg-color: rgba(140,15,109,0.7);
+	--para-font-color: #ffbcff;
+	--para-padding: 5px;
+	--para-border-width: var(--banner-border-width);
+
+/*
+** Width of the Links sidebar/main elements.  Should be modified together and accordingly.
+*/		 
+	 --sidebar-size: 50%;
+	 --main-size: /* 75%; */ calc(100% - var(--sidebar-size));  
+	
+	 --logo-width: 150px;
+	 --logo-aspect: 0.75; /* 4:3 */
+	 --logo-height: calc( var(--logo-width) * var(--logo-aspect));
+	 
+	 --logo-half-width: calc(var(--logo-width)/2);
+	 --logo-x-offset: calc(50% - var(--logo-half-width));
+	 
+	 
+} /* :root */
+	
+
+/* Link colors coded here because again only sidebar uses it. */
+
+a:visited {
+color: var(--link-visited);
+}
+
+a:link {
+color: var(--link-new);
+}
+
+
+/*
+** Main part begins here.  It's sort of in the name.
+*/
+
+.body {
+
+  
+  }
+  
+  
+/*
+** sidebar: The list of links at the side. 
+*/	
+.sidebar {
+
+  position: relative;
+/*  height: 100%;*/
+  width: var(--sidebar-size);
+  top: 0;
+  left: 0;
+  
+  z-index: var(--z-general);
+
+  background: linear-gradient(45deg,#17020f,#1a0e05,#021c0d);
+
+  overflow-x: hidden;
+
+	padding:10px;
+	
+  
+} /* .sidebar */
+
+
+.main {
+
+  position:fixed;
+  top:0;
+  
+  width:100%;
+  height:100%;
+  
+  background:linear-gradient(45deg,#f0138c,rgba(0,0,0,0.8),rgba(31,255,121,0.9));
+  
+  padding: 10px;
+   
+    
+  
+} /* main */
+
+
+/*
+** Container to stack the header elements vertically
+*/
+
+
+.header-box {
+  position: relative;
+  z-index:var(--z-general);
+  display: flex;
+  flex-flow: column; 
+  background:rgba(0,0,0,0);
+} /* header box */
+
+
+#banner-main {  /* These properties are common to banner1 and banner2 */
+
+  position: relative; 
+  font-family:Parisienne,cursive,arial,helvetica;
+  text-align:center;
+  z-index:var(--z-general);
+
+} /* #banner-main */
+
+.banner1 { /* My huge signature line at the top */
+
+  position: relative; 
+  line-height: 180%;
+
+  font-size:96px;
+
+  border-style: solid;
+  border-color: var(--banner-border-color);
+  background:var(--banner-bg-color);
+  color:var(--banner-font-color);
+   z-index:var(--z-general);
+ 
+} /* .banner1 */
+
+.banner2 { /* The "mission statement" */
+
+  position: relative; 
+ /* top:160px; */
+  
+  font-size:36px;
+
+  border-style: solid;
+  border-color: var(--header-border-color);
+  background: var(--header-bg-color);
+  color: var(--header-font-color);
+  z-index:var(--z-general);
+
+} /* .banner2 */
+  
+
+/*
+** The HTML/CSS h? tags.  
+** 
+*/
+
+h1 { 
+ 
+  font-family:Parisienne,cursive,arial,helvetica;
+  border-style: solid;
+  border-color: var(--banner-border-color);
+  background-color:var(--banner-bg-color);
+  color:var(--banner-font-color);
+  font-size:28px;
+}
+
+
+h2 {
+
+  font-family:Parisienne,cursive,arial,helvetica;
+  border-style: solid;
+  border-color: var(--header-border-color);
+  background: var(--header-bg-color);
+  color: var(--header-font-color);
+
+}
+
+
+h3 { /* h3 is reserved for the sidebar */
+  font-size: 18px;
+  border-style: solid;
+  border-color: coral;
+  color:violet;
+  background:linear-gradient(270deg,rgba(3,255,255,0.4),#000000);
+}
+
+p {
+text-align:justify;
+padding: var(--para-padding);
+}
+
+.thumbnail { /* Must be like a billboard or something */
+             /* No, it's thumbnails.  They should be in a regpara container... */
+  float: left;
+ 	      /* ^^ because of that.  If they're just out there naked they won't get */
+ 	      /* the container's z stacking priority. */
+ 	      
+  font-size:16px;
+  border-style: solid;
+  border-color: var(--para-border-color);
+  color: var(--para-font-color);
+
+  background: #6b0603;
+  
+  padding: 2px;
+  text-align:center;
+  
+} /* thumbnail */
+
+.regpara { /* This is meant to be a container block for the bulk of the writing, whatever */
+	   /* that may wind up consisting of. */
+
+  position: relative; 
+
+  z-index:5;
+
+  font-size: 26px;
+  border-style: solid;
+  border-color: var(--para-border-color);
+  color: var(--para-font-color);
+  background: linear-gradient(12deg,rgba(32,151,23,0.9),rgba(5,9,3,1),rgba(130,10,130,0.7),rgba(5,9,3,0.8),rgba(192,75,60,0.8));
+
+  padding:var(--para-padding);
+
+} /* regpara */
+
+
+
+

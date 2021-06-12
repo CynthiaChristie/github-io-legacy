@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<
+
+<div id="main">
+
+<div class="header-block" >
+
+<h1 id="title" style="">Street Survey</h1>
+
+<p id="description">Survey of Street People</p>
+
+</div>
+
+
+
+  <form id="survey-form">
+  
+  <div class="container">
+  
+  <label for="name" id="name-label" >Name</label>
+  <input type="text" id="name" name="name" placeholder="Name" required>
+ 
+  
+  <label for="email" id="email-label" >E-Mail</label>
+  <input type="email" id="email" name="email" placeholder="username@site.com" required>
+ 
+  
+  <label for="arrested" id="number-label">How many STDs? (Say 12 if more than 12)</label>
+  <input type="number" id="number" name="arrested" placeholder="4" min="0" max="12">
+  
+  
+  <label for="drugofchoice">What is your favorite drug?</label>
+  <select name="drugofchoice" id="dropdown">
+    <option value="down">Down</option>
+    <option value="side">Side</option>
+    <option value="jib">Jib</option>
+    <option value="crack">Crack</option>
+    <option value="pills">Pills</option>
+    <option value="alcohol">Alcohol</option>
+    <option value="pot">Pot</option>
+  </select>
+  
+  </div> <!-- container -->
+  
+  <div class="radio-container">
+  
+    <div class="rheader">Where do you sleep?</div>
+  
+    <div class="r1">
+      <input type="radio" name="sleep" value="outside">
+      <label for="outside">Outside</label>
+  </div>
+  
+  <div class="r2">
+    <input type="radio" name="sleep" value="shelter">
+  <label for="shelter">Shelter</label>
+   </div>
+  
+  <div class="r3">
+    <input type="radio" name="sleep" value="nosleep">
+  <label for="nosleep">The Drugs Don't Allow Me to Sleep</label>
+  </div>
+  
+  
+  <div class="r4">
+   <input type="radio" name="sleep" value="withlosers">
+  <label for="withlosers">With a Series of Grim and Diseased Losers</label>
+   </div>
+ 
+  
+  </div> <!-- radio-container -->
+  
+  <div class="radio-container">
+  
+    <div class="rheader">How can street people benefit society?"</div>
+    
+    
+      <label class="r1" for="medical"><input id="medical" value="medical" name="use" type="checkbox">Medical Experiments</label>
+      <label class="r2" for="fill"><input id="fill" value="fill" name="use" type="checkbox">Fill Material for Construction Sites</label>
+      <label class="r3" for="organ"><input id="organ" value="organ" name="use" type="checkbox">Organ Donation</label>
+      <label class="r4" for="fodder"><input id="fodder" value="fodder" name="use" type="checkbox">Cannon Fodder in War</label>
+      <label class="r5" for="soylent"><input id="soylent" value="soylent" name="use" type="checkbox">Soylent Green</label>
+
+  </div>      
+  
+  <div class="radio-container">
+  <label class="rheader" for="commentary">Please provide any additional commentary you may wish to.</label>
+  <textarea class="r1" id="commentary" name="commentary" rows="4" cols="50"></textarea>
+   <input  id="submit" class="r6" style="text-align:center;" type="submit" value="Click to submit info">
+  </div>
+   
+  </form>
+
+
+
+</div> <!-- main -->
+
+</body>
+</html>
+
+

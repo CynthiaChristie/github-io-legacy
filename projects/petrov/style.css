@@ -1,0 +1,126 @@
+:root {
+  --banner-width:80%;
+  
+  --banner-fg-color:#54ffb8;
+  --banner-bg-color:#231bff;
+  
+  --banner-border-radius:15%;
+  
+  
+  }
+
+
+a:link {
+  color:coral;
+}
+
+a:visited {
+  color:orange;
+}
+ 
+
+#main {
+
+  position:relative;
+  
+
+  background: url("images/doveray.jpg") no-repeat fixed center;
+  background-size:100% 100%;
+
+
+
+
+font-family: palatino,helvetica;
+
+}
+
+#img-div {
+
+}
+
+#img-caption {
+
+}
+
+#image {
+position:relative;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  
+  width:100px;
+  max-width:10vw;
+
+  border-style:solid;
+  border-color:#54ffb8;
+  border-radius: 50%;
+  
+
+}
+
+#tribute-link {}
+
+#tribute-link-block {
+position: relative;
+text-align:left;
+
+left:20%;
+
+font-size: 22px;
+}
+
+#banner {
+
+position: relative;
+
+background-color:var(--banner-bg-color);
+border-color:var(--banner-fg-color);
+border-style:solid;
+color:var(--banner-fg-color);
+
+left:calc(calc(100% - var(--banner-width) ) / 2);
+width:var(--banner-width);
+
+margin: 5px;
+
+
+
+border-radius: var(--banner-border-radius);
+} 
+
+
+#title {}
+
+.tribute-header {
+   border-style: solid;
+  border-color: yellow;
+  color: yellow;
+  font-size:24px;
+  padding:3px;
+} 
+  
+
+
+#tribute-info { 
+          
+  position: relative; 
+
+  border-style: solid;
+  border-color: yellow;
+  color: yellow;
+  background: linear-gradient(45deg,rgba(255,0,0,0.9),rgba(0,0,0,0.9),rgba(255,0,0,0.9));
+
+  padding:3px;
+  
+  margin: 5% 15% 0px 15%;
+  
+  opacity: 0.8;
+ 
+} 
+
+p {
+text-align:justify;
+}
+
