@@ -19,21 +19,28 @@ a:visited {
 }
  
 
-#main {
 
+
+
+@media screen and (orientation:landscape) {
+#main {
   position:relative;
   
-
   background: url("images/doveray.jpg") no-repeat fixed center;
   background-size:100% 100%;
-
-
-
-
-font-family: palatino,helvetica;
-
+  font-family: palatino,helvetica;
+}
 }
 
+@media screen and (orientation:portrait) {
+#main {
+  position:relative;
+  
+  background: url("images/doveray-p.jpg") no-repeat fixed center;
+  background-size:100% 100%;
+  font-family: palatino,helvetica;
+}
+}
 #img-div {
 
 }

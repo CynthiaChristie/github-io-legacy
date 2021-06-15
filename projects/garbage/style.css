@@ -17,8 +17,10 @@ a:visited {
 color:violet;
 }
 
-#main {
 
+
+@media screen and (orientation:landscape) {
+#main {
 position: relative;
 top:0;
 left:0;
@@ -28,6 +30,21 @@ background-size:100vw 100vh;
 width: 100vw;
 height: 100%;
 color: white;
+}
+}
+
+@media screen and (orientation:portrait) {
+#main {
+position: relative;
+top:0;
+left:0;
+
+background: url("images/garbage-p.jpg") no-repeat fixed ;
+background-size:100vw 100vh;
+width: 100vw;
+height: 100%;
+color: white;
+}
 }
 
 .std-style {
@@ -96,17 +113,6 @@ display:block;
 margin-left:auto;
 margin-right:auto;
 
-}
-
-@media (min-width:720px) {
-
-  #video {
-  margin:10px;
-display:block;
-margin-left:auto;
-margin-right:auto;
-width:640px;
-height:480px;
 }
 
 .nav-link {}
