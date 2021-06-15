@@ -1,0 +1,100 @@
+:root {
+
+--navbar-size: 30%;
+--main-size: calc(100% - var(--navbar-size));
+
+--thumbnail-size:12vw;
+--inset-size:35vw;
+
+}
+
+a:link {
+color: white;
+background-color: rgba(0,0,0,0.4);
+}
+
+a:visited {
+color: gray;
+background-color: rgba(0,0,0,0.4)
+}
+
+p {
+text-align:justify;
+padding:5px;
+background-color:rgba(0,0,0,0.6);
+}
+
+ul {
+background-color:rgba(0,0,0,0.6);
+}
+
+body {
+
+background: url("images/enterprise.jpg") no-repeat fixed ;
+background-size:100vw 100vh;
+}
+
+h2 {
+margin-left:5px;
+}
+
+#main {
+
+/*position: relative;
+top:0;
+left:0;
+
+
+width: 100vw;
+height: 100vh;
+color:white;
+*/
+}
+
+#main-doc {
+position:relative;
+top:0;
+right:0;
+
+left:var(--navbar-size);
+
+
+width: calc(var(--main-size) - 5px);
+height: 100%;
+
+
+}
+
+#navbar {
+position: fixed;
+top:0;
+left: 0;
+
+width: var(--navbar-size);
+height:100%;
+}
+
+#navheader: {
+position:fixed;
+top:0;
+left:0;
+}
+
+
+.std-style {
+position:relative;
+
+background-color: rgba(0,0,0,0.4);
+border-color: white;
+border-style: solid;
+color:white;
+font-family: helvetica,arial;
+/*padding:1px;*/
+/* margin:auto; */
+}
+
+.thumbnail {
+float:left;
+width:calc( var(--thumbnail-size) * 1.2 );
+}
+
