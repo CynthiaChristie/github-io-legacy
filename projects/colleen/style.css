@@ -40,7 +40,7 @@
 --dogwood-left:  calc(calc(100vw - var(--dogwood-width)) / 2 );
 
 --profile-width: 100px;
---profile-y-offset:-20px;
+--profile-y-offset:10px;
 
 /*
 ** FONTS
@@ -90,7 +90,7 @@
 --dogwood-left:  calc(calc(100vw - var(--dogwood-width)) / 2 );
 
 --profile-width: 200px;
---profile-y-offset:-20px;
+--profile-y-offset:0;
 /*
 ** FONTS
 */
@@ -204,7 +204,8 @@ border-style:solid;
 border-color:var(--header-border-color);
 
 
-margin:auto;
+left:calc(calc(100% - var(--profile-width)) / 2 );
+
 border-radius:50%;
 
 width:var(--profile-width);
