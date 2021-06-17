@@ -77,7 +77,7 @@
 
 --header-top:240px;
 --header-left: 0;
---header-height:300px;
+--header-height:200px;
 --header-width: 800px;
 
 --header-pad:30px;
@@ -153,6 +153,7 @@ border-color: var(--header-border-color);
 border-radius: 40%;
 
 background-color:rgba(0,0,0,0.2);
+padding:var(--header-pad);
 }
 
 #lilac-container {
