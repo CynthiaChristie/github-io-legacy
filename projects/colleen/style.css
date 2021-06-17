@@ -203,7 +203,7 @@ top: var(--profile-y-offset);
 border-style:solid;
 border-color:var(--header-border-color);
 
-display: block;
+
 margin:auto;
 border-radius:50%;
 
