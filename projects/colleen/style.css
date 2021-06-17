@@ -9,9 +9,20 @@
 --text-color:#87c8e8;
 
 --header-border-color: #87c8e8;
+
 --burst-width:1200px;
+--burst-top:650px;
+--burst-left:calc(calc(100vw - var(--burst-width)) / 2);
+
+--header-top: 120px;
+--header-left: 0;
+--header-width: 800px;
+
 
 --dogwood-width: 600px;
+--dogwood-top: 130px;
+--dogwood-left:  calc(calc(100vw - var(--dogwood-width)) / 2 );
+
 }
 
 @media screen and (orientation:portrait) {
@@ -26,9 +37,9 @@ background-color: var(--base-color);
 
 #burst {
 position: relative;
-top:650px;
+top: var(--burst-top);
 
-left: calc(calc(100vw - var(--burst-width)) / 2);
+left: var(--burst-left);
 
 
 color: var(--bg-color);
@@ -45,14 +56,14 @@ box-shadow: 0 0 100px 600px;
 
 header {
 position: relative;
- top: -50px; 
-
-left:0;
+/* top: -50px; */ 
+top:var(--header-top);
+left:var(--header-left);
 
 color: var(--text-color);
 font-family:Parisienne,helvetica,arial;
 
-width: 800px;
+width: var(--header-width);
 
 margin:auto;
 text-align:center;
@@ -65,9 +76,11 @@ background-color:rgba(0,0,0,0.2);
 }
 
 #lilac-container {
-position: relative;
-/* top:-100px; */
+position: fixed;
+top:0;
 left:0;
+
+width:100vw;
 
 
 display: grid;
@@ -77,10 +90,10 @@ grid-template-columns: 30% 40% 30%;
 
 #dogwood {
 position: relative;
-top: -50px;
+top:var(--dogwood-top);
 width:var(--dogwood-width);
 
-left: calc(calc(100vw - var(--dogwood-width)) / 2 );
+left: var(--dogwood-left);
 }
 
 .lilac-box {
