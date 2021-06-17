@@ -67,7 +67,7 @@
 ** LAYOUT
 */
 
---lilac-width:300px;
+--lilac-width:400px;
 
 --burst-width:1200px;
 --burst-height:100px;
@@ -80,7 +80,7 @@
 --header-width: 800px;
 
 
---dogwood-width: 1200px;
+--dogwood-width: 1100px;
 --dogwood-top: 250px;
 --dogwood-left:  calc(calc(100vw - var(--dogwood-width)) / 2 );
 
