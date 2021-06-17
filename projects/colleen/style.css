@@ -33,6 +33,7 @@
 --header-height:190px;
 --header-width: 800px;
 
+--header-pad:0;
 
 --dogwood-width: 600px;
 --dogwood-top: 130px;
@@ -46,7 +47,7 @@
 --header2-font-size:48px;
 
 } /* root */
-} /* media query */
+} /* media query landscape */
 
 
 @media screen and (orientation:portrait) {
@@ -79,6 +80,7 @@
 --header-height:300px;
 --header-width: 800px;
 
+--header-pad:30px;
 
 --dogwood-width: 1100px;
 --dogwood-top: 250px;
@@ -93,7 +95,7 @@
 
 
 } /* root */
-} /* media query */
+} /* media query portrait */
 
 /*
 --dogwood-width: 1200px;
