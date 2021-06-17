@@ -44,7 +44,7 @@
 --header1-font-size:84px;
 --header2-font-size:48px;
 
-}
+
 
 @media screen and (orientation:portrait) {
 --dogwood-width: 1200px;
@@ -57,6 +57,7 @@
 
 }
 
+}
 
 body {
 position: fixed;
