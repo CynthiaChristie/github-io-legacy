@@ -1,13 +1,8 @@
 {
 	"author": "Cynthia Christie",
-	"description": "I CAN code my way out of a paper bag!",
-	"keywords": [ "can", "code", "out", "paper", "bag" ],
-	"licence": "Paper Bag Escape (c)",
-	"version": "1.0.1 Alpha",
 	"name": "fcc-learn-npm-package-json",
 	"dependencies": {
-		"express": "^4.14.0",
-		"@freecodecamp/example": "~1.2.x"
+		"express": "^4.14.0"
 	},
 	"main": "server.js",
 	"scripts": {
